@@ -1,44 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 慕课网React+TypeScript仿写Antd组件库学习记录
 
-## Available Scripts
+### 10.06提交
+1. 完善文件结构和代码规范
+    - 1.1 新建src/components组件文件夹、src/styles公共样式文件夹
+    - 1.2 如果使用vsCode进行开发，而且使用了ESLint的话，需要修改TS语法支持的后缀，添加typescriptreact的一些处理，这样才会自动修复一些ESLint的规则。于是新增.vscode/settings.json，并添加以下代码
+    ```
+    {
+        "eslint.validate": [
+            "javascript",
+            "javascriptreact",
+            {
+            "language": "typescript",
+            "autoFix": true
+            },
+            {
+            "language": "typescriptreact",
+            "autoFix": true
+            }
+        ]
+        }
+    ```
+2. 新增src/styles文件夹，并新增以下文件
+    - 2.1 _variables.scss文件，添加公共样式变量
+    - 2.2 _reboot.scss文件，添加normalize.css(优化各浏览器更好显示)
+    - 2.3 index.scss文件
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 截止10/6项目结构
+```
+│  .gitignore  
+│  package.json  
+│  README.md  
+│  tsconfig.json  
+│  yarn.lock  
+│    
+├─.vscode  
+│      settings.json  
+│                
+├─public  
+│      favicon.ico  
+│      index.html  
+│      logo192.png  
+│      logo512.png  
+│      manifest.json  
+│      robots.txt  
+│        
+└─src  
+    │  App.css  
+    │  App.test.tsx  
+    │  App.tsx  
+    │  index.css  
+    │  index.tsx  
+    │  logo.svg  
+    │  react-app-env.d.ts  
+    │  serviceWorker.ts  
+    │  setupTests.ts  
+    │  
+    ├─components  
+    └─styles    
+           │_functions.scss 全局functions  
+           │_mixins.scss    全局mixins  
+           |_reboot.scss    normalize.css
+           │_variables.scss 各种变量以及可配置设置  
+           |index.scss      全局样式入口
+```

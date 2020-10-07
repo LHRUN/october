@@ -25,7 +25,13 @@
     - 2.2 _reboot.scss文件，添加normalize.css(优化各浏览器更好显示)
     - 2.3 index.scss文件
 
-### 截止10/6项目结构
+### 10.07提交
+1. 引入classnames库`npm install classnames --save`、`npm install @types/classnames --save`,作用是动态添加多个className
+2. 新增components/Button按钮组件
+    - 2.1 button组件增加单元测试button.test.tsx，测试框架使用的是react-testing-library，新版create-react-app已经自带，无需下载
+3. 新增styles/_mixins.scss全局mixins
+
+### 截止10/7项目结构
 ```
 │  .gitignore  
 │  package.json  
@@ -56,10 +62,12 @@
     │  setupTests.ts  
     │  
     ├─components  
+    |          | Button  按钮组件
+    |          |
     └─styles    
-           │_functions.scss 全局functions  
-           │_mixins.scss    全局mixins  
-           |_reboot.scss    normalize.css
-           │_variables.scss 各种变量以及可配置设置  
-           |index.scss      全局样式入口
+           │ _functions.scss 全局functions  
+           │ _mixins.scss    全局mixins  
+           | _reboot.scss    normalize.css
+           │ _variables.scss 各种变量以及可配置设置  
+           | index.scss      全局样式入口
 ```

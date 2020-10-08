@@ -31,6 +31,9 @@
     - 2.1 button组件增加单元测试button.test.tsx，测试框架使用的是react-testing-library，新版create-react-app已经自带，无需下载
 3. 新增styles/_mixins.scss全局mixins
 
+### 10.08提交
+1. 新增components/Menu菜单组件
+
 ### 截止10/7项目结构
 ```
 │  .gitignore  
@@ -63,7 +66,7 @@
     │  
     ├─components  
     |          | Button  按钮组件
-    |          |
+    |          | Menu    菜单组件
     └─styles    
            │ _functions.scss 全局functions  
            │ _mixins.scss    全局mixins  

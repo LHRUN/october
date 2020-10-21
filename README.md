@@ -34,7 +34,18 @@
 ### 10.08提交
 1. 新增components/Menu菜单组件
 
-### 截止10/7项目结构
+### 10.21提交
+1. 引入fontawesome图标库
+   ```
+    npm i --save @fortawesome/fontawesome-svg-core \
+             @fortawesome/free-solid-svg-icons \
+             @fortawesome/react-fontawesome
+   ```
+2. 引入react-transition-group动画库`npm install react-transition-group @types/react-transition-group --save`
+3. 新增components/Icon图标组件、components/Transition动画组件
+4. 新增styles/_animation.scss全局动画样式
+
+### 截止10/21项目结构
 ```
 │  .gitignore  
 │  package.json  
@@ -54,20 +65,20 @@
 │      robots.txt  
 │        
 └─src  
-    │  App.css  
     │  App.test.tsx  
     │  App.tsx  
-    │  index.css  
-    │  index.tsx  
-    │  logo.svg  
+    │  index.tsx 
     │  react-app-env.d.ts  
     │  serviceWorker.ts  
     │  setupTests.ts  
     │  
     ├─components  
-    |          | Button  按钮组件
-    |          | Menu    菜单组件
-    └─styles    
+    |          | Button     按钮组件
+    |          | Menu       菜单组件
+    |          | Icon       图标组件
+    |          | Transition 动画组件
+    └─styles
+           | _animation.scss 动画样式    
            │ _functions.scss 全局functions  
            │ _mixins.scss    全局mixins  
            | _reboot.scss    normalize.css
